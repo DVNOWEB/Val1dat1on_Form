@@ -68,6 +68,20 @@ function validEmail(email) {
 function validPassword(password) {
   return /^(?=.*[a-z])(?=.*[A-Z])[0-9a-zA-Z]{6,}$/.test(password)
 }
+
+function validCheckbox(){
+  let check = false
+  if(document.getElementById('terms').checked){
+       
+    check = true
+
+  } else {
+
+    return false
+  }
+  
+}
+
 // Error message footer
 function errorCheck() {
   let errorMsg = document.getElementById('errorMessage')
@@ -125,19 +139,17 @@ document.getElementById('validationForm').addEventListener('submit', function(e)
     ui.showAlert('Password does not match, repeat password!', 'error')
 
   } 
-  else if (!checkbox.checked) {
-    ui.showAlert('You most accept our terms and conditions!', 'error')
-
-  } 
-  else {
+  else if (!document.getElementById('terms').checked) {
+    ui.showAlert('You most accept our terms and conditions!', 'error');
+  } else {
     // ui.addUserToList(user);
     // add user to list
     // Success
-    ui.showAlert('You are registered, congratulations!', 'success')
-    
+    ui.showAlert('You are registered, congratulations!', 'success');
+
     // setSuccess(input)
     //Clear fields
-    ui.clearFields()
+    ui.clearFields();
   }
   console.log(user)
 
