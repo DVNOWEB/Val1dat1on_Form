@@ -19,7 +19,7 @@ class UI {
     // add text
     div.appendChild(document.createTextNode(message))
     // Feedback message
-    const errorMessage = document.querySelector('#errorMessage');
+    const errorMessage = document.querySelector('#errorMessage')
     // Get form
     const form = document.querySelector('#validationForm')
     // insert alert
@@ -42,7 +42,7 @@ class UI {
 }
 // RegExp
 function validText(firstName, lastName) {
-  return /^[a-zA-Z]{2,}$/.test(firstName, lastName);
+  return /^[a-zA-Z]{2,}$/.test(firstName, lastName)
 }
 
 function validEmail(email) {
@@ -92,21 +92,21 @@ document.getElementById('validationForm').addEventListener('submit', function(e)
 
   } else if (!validPassword(password)) {
     ui.showAlert(
-      'Password Error : min 6 letters, Upper and lower case letters and numbers.', '#errorMessage');
+      'Password Error : min 6 letters, Upper and lower case letters and numbers.', '#errorMessage')
 
   } else if (password !== repPassword) {
     ui.showAlert('Password does not match, repeat password!', '#errorMessage')
 
   } else if (!document.getElementById('terms').checked) {
-    ui.showAlert('You most accept our terms and conditions!', '#errorMessage');
+    ui.showAlert('You most accept our terms and conditions!', '#errorMessage')
 
   } else {
     // Success
-    ui.showAlert(`Hello, ${user.firstName} ${user.lastName} You are successfully registered, congratulations!`, 'success');
+    ui.showAlert(`Hello, ${user.firstName} ${user.lastName} You are successfully registered, congratulations!`, 'success')
 
     console.log(user, 'You are successfully registered, congratulations!')
     //Clear fields
-    ui.clearFields();
+    ui.clearFields()
   }
   e.preventDefault()
 })
