@@ -24,10 +24,9 @@ class UI {
     const form = document.querySelector('#validationForm')
     // insert alert
     errorMessage.appendChild(div, form)
-    
     // Timeout
-    // setTimeout(function(){
-    // document.querySelector('.alert').remove()}, 3000)
+    setTimeout(function(){
+    document.querySelector('.alert').remove()}, 3000)
  }
 
   clearFields(){
