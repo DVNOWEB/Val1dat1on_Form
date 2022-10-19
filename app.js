@@ -1,4 +1,3 @@
-
 class User {
   constructor(firstName, lastName, email, password, repeatPassword, checkbox) {
     this.firstName = firstName;
@@ -8,21 +7,11 @@ class User {
     this.repeatPassword = repeatPassword;
     this.checkbox = checkbox;
   }
-  
 }
-
 class UI {
-  
-  addUserToList(user) {
-
-    // const card = document.getElementById('errorMessage');
-    // const row = document.createElement('div', 'successMessage')
-
-    // row.innerHTML = `<p>Hello, ${user.firstName} ${user.lastName} you are successfully registered!</p>`
-    // card.appendChild(row)
+  addUser(user) {
 
   }
-
   showAlert(message, className){
     const div = document.createElement('div')
     // add classes 
@@ -36,11 +25,9 @@ class UI {
     // insert alert
     errorMessage.appendChild(div, form)
     
-
     // Timeout
     setTimeout(function(){
-    document.querySelector('.alert').remove()}, 4000)
-
+    document.querySelector('.alert').remove()}, 3000)
  }
 
   clearFields(){
@@ -68,33 +55,25 @@ function validPassword(password) {
 
 function validCheckbox(){
   let check = false
-  if(document.getElementById('terms').checked){
-       
+  if(document.getElementById('terms').checked){ 
     check = true
-
   } else {
-
     return false
   }
-  
 }
-
 // Event listeners
 document.getElementById('validationForm').addEventListener('submit', function(e){
 
-   // console.log('test')
-
-    const firstName = document.getElementById('firstName').value,
+  const firstName = document.getElementById('firstName').value,
           lastName = document.getElementById('lastName').value,
           email = document.getElementById('email').value,
           password = document.getElementById('password').value,
           repPassword = document.getElementById('repeatPassword').value,
           checkbox = document.getElementById('terms').checked
-    
-    // Instan. user
-    const user = new User(firstName, lastName, email, password, repPassword, checkbox)
-    // Instant. UI
-    const ui = new UI()
+  // Instan. user
+  const user = new User(firstName, lastName, email, password, repPassword, checkbox)
+  // Instant. UI
+  const ui = new UI()
   // Validate
   if (
     firstName === '' || lastName === '' || email === '' || password === '' || repPassword === '') {
@@ -122,19 +101,12 @@ document.getElementById('validationForm').addEventListener('submit', function(e)
     ui.showAlert('You most accept our terms and conditions!', '#errorMessage');
 
   } else {
-    // ui.addUserToList(user);
-    // add user to list
     // Success
-    ui.showAlert('You are registered, congratulations!', 'success');
+    ui.showAlert(`Hello, ${user.firstName} ${user.lastName} You are successfully registered, congratulations!`, 'success');
 
     console.log(user, 'You are successfully registered, congratulations!')
-    // setSuccess(input)
     //Clear fields
     ui.clearFields();
   }
-
-  
-
-  
   e.preventDefault()
 })
