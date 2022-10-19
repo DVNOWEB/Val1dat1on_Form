@@ -57,7 +57,7 @@ body {
   width: 100%;
 }
 .btn-primary {
-  background-color: hsl(180, 25%, 25%);
+  background-color: hsl(180, 25%, 20%);
   color: #ffffff;
   transition: background 70ms;
 }
@@ -87,19 +87,19 @@ body {
 .success {
   text-align: center;
   width: 100%;
-  padding: 0.8em 1em;
   border-radius: 0.5rem;
   border: 0;
   outline: none;
-  text-transform: uppercase;
-  font-weight: 600;
+  /* text-transform: uppercase; */
+  font-weight: 400;
   color: white;
-  padding: 5px;
-  margin: 5px 0 5px 0;
+  padding: 25px;
+  margin: 5px 0 15px 0;
 }
 
 .success {
-  background-color: hsl(137, 89%, 25%);
+  /* background-color: hsl(137, 89%, 25%); */
+  background-color: hsl(180, 25%, 20%);
 }
 
 .error {
