@@ -1,3 +1,0 @@
-1. No copies on users
-2. Move feedbeck under heading
-3. Remove error from footer and change to success
