@@ -17,7 +17,7 @@
         <div class="headline">
           <h1>Validation Form</h1>
         </div>
-        <div id="backMessage"></div>
+        
         <div class="form-content">
 
           <div class="input-group">
@@ -51,14 +51,11 @@
           </div>
 
           <div>
-            <button class="btn btn-block btn-primary" type="submit" value="submit" onclick="errorCheck()">Validate</button>
+            <button class="btn btn-block btn-primary" type="submit" value="submit">Validate</button>
           </div>
 
-        
         </div>
-        <div class="validation-feedback">
-          <p class="d-none" id="errorMessage">All fields must be filled in correctly!</p>
-        </div>
+        <div class="validation-feedback" id="errorMessage"></div>
       </div>
     </form>
 

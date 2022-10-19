@@ -74,17 +74,17 @@ body {
 }
 
 #errorMessage {
+  font-weight: bold;
   color: rgb(208, 90, 90);
   text-align: center;
 }
 
-.d-none {
+/* .d-none {
   display: none;
   text-align: center;
-}
+} */
 
-.success,
-.error {
+.success {
   text-align: center;
   width: 100%;
   padding: 0.8em 1em;
