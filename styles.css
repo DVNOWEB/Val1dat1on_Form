@@ -74,7 +74,7 @@ body {
 }
 
 #errorMessage {
-  font-weight: bold;
+  font-weight: 400;
   color: rgb(208, 90, 90);
   text-align: center;
 }
@@ -99,7 +99,7 @@ body {
 }
 
 .success {
-  background-color: hsl(137, 69%, 33%);
+  background-color: hsl(137, 89%, 25%);
 }
 
 .error {
